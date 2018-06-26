@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Andrew Leak"]
   spec.email         = ["andy@r210.com"]
 
-  spec.summary       = %q{Issue Oracle}
-  spec.description   = %q{Bugmark Issue Oracle}
+  spec.summary       = %q{Payment Processor}
+  spec.description   = %q{Bugmark Payment Processor}
   spec.homepage      = "http://github.com/bugmark/paypro"
   spec.license       = "Nonstandard"
 
