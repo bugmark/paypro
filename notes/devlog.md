@@ -1,7 +1,5 @@
-# IORA Devlog
+# PAYPRO DEVLOG
 
-## 2018-04-05 THU
+## 2018-06-25 THU
 
-- [ ] Add a test repo that reads from a YAML file
-- [ ] Add a data directory with sample test file
-- [ ] Add a binary
+- [x] Initial design
