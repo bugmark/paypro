@@ -1,0 +1,31 @@
+---
+- title:    Item 1
+  sequence: 1
+  body:     Body for item 1 /123456
+  exid:     element1
+  status:   open
+- title:    Item 2
+  sequence: 2
+  body:     Body for item 2 /abcdef
+  exid:     element2
+  status:   open
+- title:    item 3
+  sequence: 3
+  body:     Body for item 3 /098765
+  exid:     element3
+  status:   closed
+- title:    item 4
+  sequence: 4
+  body:     Body for item 4 /a1b2c3
+  exid:     element4
+  status:   open
+  comments:
+    - exid: com1
+      body: Comment for com1 /a1b1c1
+      author: auth1
+      issue_sequence: 4
+    - exid: com2
+      body: Comment for com2
+      author: auth1
+      issue_sequence: 4
+

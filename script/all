@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+script/clean && script/run_bundle && script/build && script/install
+

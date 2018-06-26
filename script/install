@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+gem install paypro-0.1.0.gem
