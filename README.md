@@ -4,7 +4,7 @@ Bugmark Payment Processor
 
 This gem interfaces with payment processors, normalizing
 payment operations into a standard Bugmark-compatible
-format.
+workflow.
 
 ## Installation
 
@@ -31,7 +31,7 @@ processor credentials are stored in a hash:
 }
 ```
 
-Here are the options for specifying processor credentials
+Here are the options for specifying service credentials
 (in priority order):
 
 1) as an optional parameter during object creation 
@@ -43,7 +43,7 @@ Here are the options for specifying processor credentials
 
 ### Paypro Demo
 
-The Paypro Api has three methods:
+The Paypro class has three instance methods:
 
 - `collect`
   collects funds from the user and deposits them into the pool
@@ -56,7 +56,7 @@ Sample Code:
   
     require 'bugmark/exchange'
     require 'bugmark/paypro'  
-    paypro = Paypro.create(<svc_type>, <paypro_name>, <currency>)
+    paypro = Paypro.new(<svc_type>, <paypro_name>, <currency>)
     user   = UserCmd::Create(email, name)
     ledger = UserCmd::CreateLedger(user, paypro.to_hash)
     paypro.pool_balance                        #=> 100
@@ -69,20 +69,20 @@ Sample Code:
     end
     paypro.pool_balance                        #=> 900
 
-Note that each paypro service implements unique collection
+Note that each Paypro service implements unique collection
 and distribution methods.  Some may collect via credit-card,
-some by invoice, some by EFT.  Some paypros may distribute
+some by invoice, some by EFT.  Some Paypros may distribute
 funds via handwritten check, or banking payment services, 
 or blockchain payment.
 
-Each paypro is resonsible for implementing it's own pool.
+Each Paypro is resonsible for implementing it's own pool.
 Some may choose to use a commercial bank account, others may
 store the pool on the blockchain, others may use a CSV file.
 
-Each paypro is responsible for collecting and safely 
+Each Paypro is responsible for collecting and safely 
 storing user credentials, credit card numbers, etc.
 
-Each paypro is responsible for maintaining compliance with
+Each Paypro is responsible for maintaining compliance with
 regulatory and tax rules.
 
 ### Future Direction
